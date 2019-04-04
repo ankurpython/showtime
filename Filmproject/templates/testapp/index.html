@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+
+{% if messages %}
+<ul class="messages">
+{% for message in messages %}
+<li{% if message.tags %} class="{{ message.tags }}"{% endif %}><button type="button" class="btn btn-primary btn-lg">{{ message }}</button>
+</li>
+
+{% endfor %}
+</ul>
+{% endif %}
+
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    {% block body_block %}
+
+    <div id="container" class="full-width">
+<div id="header"><h1>Welcome To Movie News.. <a href="list/" class="btn btn-success btn-sm">View List of Movies</a></h1>
+
+</div>
+  <div id="wrapper">
+    <div id="content">
+      <p><strong>About Website..</strong></p>
+
+
+
+      <p>
+        Hindi cinema, often metonymously referred to as Bollywood, and formerly known as Bombay cinema,
+         is the Indian Hindi-language film industry, based in Mumbai (formerly Bombay), Maharashtra,
+         India. The term being a portmanteau of "Bombay" and "Hollywood". As India is a multi-lingual
+         society with variety of languages spoken by its residents, multiple language films are churned
+         out in their native languages by film industries such as Hindi-language film industry (popularly
+         known to world as Bollywood), Tamil film industry (Kollywood), Telugu film industry (Tollywood)
+         and others, together combined they form the massive Indian Cinema, the largest film industry in the world.
+
+
+</p>
+
+<p>
+  Although American film industry has already produced more than 150 musicals films by 1930 with first
+  introduction of The Jazz Singer (1927) in the west, the world's first musical-talkie film, it took
+  India more than 3 years to import the sound sequence technology but then went on to produce its
+  first song-sequence talkie film Alam Ara in the year 1931. Since then, Bollywood has produced major
+   motion pictures in this genre exceeding Hollywood's total musicals from the 1960s when musical era
+    declined in the west. Today, Bollywood is popular for its musicals though non-musicals have also
+    continued to be produced in India. Linguistically, Bollywood films tend to use a colloquial dialect
+     of Hindi-Urdu, or Hindustani, mutually intelligible to both Hindi and Urdu speakers,
+      while modern Bollywood films also increasingly incorporate elements of Hinglish.[9]</p>
+    </div>
+  </div>
+
+
+</div>
+
+    {% endblock %}
+
+  </body>
+</html>
